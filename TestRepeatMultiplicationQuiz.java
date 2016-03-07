@@ -3,7 +3,7 @@
 import java.util.Scanner;
 
 //Class
-public class TestRepeatAdditionQuiz{
+public class TestRepeatMultiplicationQuiz{
 
 	//Main method
 	public static void main(String[] args){
@@ -16,7 +16,11 @@ public class TestRepeatAdditionQuiz{
 		//Show the question and answer it
 		System.out.println("What is " + number1 + " * " + number2 + " ? ");
 		int answer = input.nextInt();
-		
-				System.out.println("You got it!");
+
+		//Get the number to the next class
+		AnswerList a = new AnswerList(number1,number2,answer);
+		a.List();
+
+		System.out.println("You got it!");
 	}
 }
