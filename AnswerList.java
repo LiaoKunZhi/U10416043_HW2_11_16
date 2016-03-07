@@ -48,4 +48,25 @@ class AnswerList{
 	int getAnswer() {
 		return answer;
 	}
+
+	public void List () {
+
+		//Makesure the answer is true or not
+		while (number1 * number2 != answer) {
+
+			//Makesure the answer is different or not
+			k = answerList.contains(answer);
+			if (k == true) {
+				System.out.println("You have already answer this number!Wrong answer! Try again. What is " + number1 + " * " + number2 + " ?");
+				answer = input.nextInt();
+			}
+
+			else {
+				//Add the number which user input
+				answerList.add(answer);
+				System.out.println("Wrong answer! Try again. What is " + number1 + " * " + number2 + " ? ");
+				answer = input.nextInt();
+			}
+		}
+	}
 }
